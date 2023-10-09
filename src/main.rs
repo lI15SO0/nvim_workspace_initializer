@@ -18,6 +18,7 @@ fn create_exrc(path: &str) {
         format!("{}{}", path, ".nvim.lua"),
         include_str!("./nvim.lua"),
     );
+    println!("Write: {}{}", path, ".nvim.lua");
 }
 
 fn create_snip_package_file(path: &str) {
@@ -25,16 +26,20 @@ fn create_snip_package_file(path: &str) {
         format!("{}{}", path, ".nvim/snip/package.json"),
         include_str!("./package.json"),
     );
+    println!("Write: {}{}", path, ".nvim/snip/package.json");
 
     let _ = std::fs::write(
         format!("{}{}", path, ".nvim/snip/global.json"),
         include_str!("./global.json"),
     );
+    println!("Write: {}{}", path, ".nvim/snip/global.json");
 }
 
 fn create_core_file(path: &str) {
     let _ = std::fs::write(format!("{}{}", path, ".nvim/lua/ws/core/options.lua"), "");
+    println!("Write: {}{}", path, ".nvim/lua/ws/core/options.lua");
     let _ = std::fs::write(format!("{}{}", path, ".nvim/lua/ws/core/keymaps.lua"), "");
+    println!("Write: {}{}", path, ".nvim/lua/ws/core/keymaps.lua");
 }
 
 fn already_is_ws(path: &str, force: bool) {
@@ -87,6 +92,7 @@ fn main() {
             create_exrc(&p);
             create_snip_package_file(&p);
             create_core_file(&p);
+            println!("Generate done at \"{}\" .", path);
         }
         None => {
             already_is_ws("./.nvim.lua", args.force);
@@ -95,7 +101,8 @@ fn main() {
             }
             create_exrc("./");
             create_snip_package_file("./");
-            create_core_file("./")
+            create_core_file("./");
+            println!("Generate done at \"./\" .");
         }
     }
 }
