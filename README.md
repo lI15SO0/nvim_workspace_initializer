@@ -19,12 +19,13 @@ Compile it and install it. Then you can use ```wsinit``` command to use it.
 ```
 Init nvim workspace dir.
 
-Usage: wsinit [PATH]
+Usage: wsinit [OPTIONS] [PATH]
 
 Arguments:
   [PATH]  
 
 Options:
+  -f, --force    
   -h, --help     Print help
   -V, --version  Print version
 ```
