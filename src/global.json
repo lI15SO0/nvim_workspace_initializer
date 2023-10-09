@@ -1,0 +1,9 @@
+{
+	"Test snip": {
+		"prefix": "TestSnip1234567890qwertyuiopasdfghjklzxcvbnm,./",
+		"body": [
+			"Test snip include correctly. Pls delete this snip at ./.nvim/snip/global.json"
+		],
+	"description": "Test snip include correctly. Pls delete this snip at ./.nvim/snip/global.json"
+	}
+}

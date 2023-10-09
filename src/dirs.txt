@@ -1,0 +1,4 @@
+.nvim
+.nvim/snip
+.nvim/lua/ws/core
+

@@ -1,0 +1,13 @@
+{
+	"name": "NeoVim WorkSpace",
+	"contributes": {
+		"snippets": [
+			{
+				"language": [
+					"all"
+				],
+				"path": "./global.json"
+			}
+		]
+	}
+}
