@@ -40,6 +40,8 @@ fn create_core_file(path: &str) {
     println!("Write: {}{}", path, ".nvim/lua/ws/core/options.lua");
     let _ = std::fs::write(format!("{}{}", path, ".nvim/lua/ws/core/keymaps.lua"), "");
     println!("Write: {}{}", path, ".nvim/lua/ws/core/keymaps.lua");
+    let _ = std::fs::write(format!("{}{}", path, ".nvim/lua/ws/core/dap.lua"), include_str!("./dap.lua"));
+    println!("Write: {}{}", path, ".nvim/lua/ws/core/dap.lua");
 }
 
 fn already_is_ws(path: &str, force: bool) {

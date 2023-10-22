@@ -12,3 +12,4 @@ end
 
 require("ws.core.keymaps")
 require("ws.core.options")
+require("ws.core.dap")
