@@ -1,6 +1,6 @@
 [package]
-name = "nvimworkspace_init"
-version = "0.1.0"
+name = "nvim_workspace_init"
+version = "0.1.1"
 edition = "2021"
 
 [[bin]]
